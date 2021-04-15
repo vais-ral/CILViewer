@@ -1,30 +1,27 @@
-from PySide2 import QtCore, QtWidgets, QtGui
-from PySide2.QtCore import QThreadPool
-from PySide2.QtWidgets import QProgressDialog, QDialog, QLabel, QComboBox, QDialogButtonBox, QFormLayout, QWidget, QVBoxLayout, QGroupBox, QLineEdit, QMessageBox
-
+import imghdr
 import os
-import time
-import numpy
-import sys
 import shutil
-
+import sys
+import time
 from functools import partial
-from os.path import isfile
 
+import numpy
 import vtk
-
 from ccpi.viewer.utils import Converter
-
-from ccpi.viewer.utils import cilNumpyMETAImageWriter
-
+from ccpi.viewer.utils.conversion import (cilBaseCroppedReader,
+                                          cilBaseResampleReader,
+                                          cilMetaImageCroppedReader,
+                                          cilMetaImageResampleReader,
+                                          cilNumpyCroppedReader,
+                                          cilNumpyResampleReader)
 # from ccpi.viewer.QtThreading import Worker, WorkerSignals, ErrorObserver #
 from eqt.threading import Worker
-
-from vtk.util.vtkAlgorithm import VTKPythonAlgorithmBase
-
-from ccpi.viewer.utils.conversion import cilNumpyResampleReader, cilBaseResampleReader, cilNumpyCroppedReader, cilMetaImageResampleReader, cilMetaImageCroppedReader, cilBaseCroppedReader
-
-import imghdr
+from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2.QtCore import QThreadPool
+from PySide2.QtWidgets import (QComboBox, QDialog, QDialogButtonBox,
+                               QFormLayout, QGroupBox, QLabel, QLineEdit,
+                               QMessageBox, QProgressDialog, QVBoxLayout,
+                               QWidget)
 
 # ImageCreator class
 
