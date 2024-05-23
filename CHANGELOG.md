@@ -5,6 +5,7 @@
 New functionality:
 - Add method to edit axes label text & tests, hide one label on 2D viewer #389 #408
 - Add slider widget #365 and option to not install it #386
+- adds Qt GUI toolbar to control 3D viewer
 
 Bugfixes:
 - Fix failing unit test #394
@@ -22,6 +23,7 @@ Documentation
 - Add CONTRIBUTING.md #403
 - Edit web-viewer readme #401
 - Transfer repository to "TomographicImaging" #402
+
 
 ## v23.1.0
 - Raise error if try to add multiple widgets with the same name to CILViewer or CILViewer2D.
